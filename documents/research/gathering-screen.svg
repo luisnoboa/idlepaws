@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F0F2F5"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="#5D4A66"/>
+  <text x="40" y="38" font-family="Arial" font-size="22" font-weight="bold" fill="white">Idle Paws</text>
+  
+  <!-- Header buttons -->
+  <circle cx="720" cy="30" r="15" fill="#FF7F50"/>
+  <text x="720" y="35" font-family="Arial" font-size="16" fill="white" text-anchor="middle">?</text>
+  
+  <circle cx="755" cy="30" r="15" fill="#FF7F50"/>
+  <text x="755" y="35" font-family="Arial" font-size="16" fill="white" text-anchor="middle">⚙</text>
+  
+  <circle cx="780" cy="30" r="15" fill="#FF7F50"/>
+  <text x="780" y="35" font-family="Arial" font-size="16" fill="white" text-anchor="middle">👤</text>
+  
+  <!-- Left Sidebar -->
+  <rect x="0" y="60" width="200" height="510" fill="#3D4A5C"/>
+  
+  <!-- Navigation Menu -->
+  <rect x="20" y="180" width="160" height="40" rx="5" fill="#4D5A6C"/>
+  <text x="100" y="205" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Home</text>
+  
+  <rect x="20" y="230" width="160" height="40" rx="5" fill="#4D5A6C"/>
+  <text x="100" y="255" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Catropolis</text>
+  
+  <rect x="20" y="280" width="160" height="40" rx="5" fill="#4D5A6C"/>
+  <text x="100" y="305" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Inventory</text>
+  
+  <rect x="20" y="330" width="160" height="40" rx="5" fill="#FF7F50"/>
+  <text x="100" y="355" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Resources ▶</text>
+  
+  <rect x="20" y="380" width="160" height="40" rx="5" fill="#4D5A6C"/>
+  <text x="100" y="405" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Exploration ▶</text>
+  
+  <rect x="20" y="430" width="160" height="40" rx="5" fill="#4D5A6C"/>
+  <text x="100" y="455" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Population</text>
+  
+  <rect x="20" y="480" width="160" height="40" rx="5" fill="#4D5A6C"/>
+  <text x="100" y="505" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Skills</text>
+
+  <!-- Main Content - Resource Gathering Panel -->
+  <rect x="200" y="60" width="400" height="510" fill="#E6E9EF"/>
+  
+  <!-- Gathering Screen Title -->
+  <text x="220" y="90" font-family="Arial" font-size="20" font-weight="bold" fill="#333333">Resource Gathering</text>
+  
+  <!-- Location Selection Tabs -->
+  <rect x="220" y="105" width="90" height="30" rx="5" fill="#BBBBBB"/>
+  <text x="265" y="125" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Garden</text>
+  
+  <rect x="320" y="105" width="90" height="30" rx="5" fill="#5D4A66"/>
+  <text x="365" y="125" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Forest</text>
+  
+  <rect x="420" y="105" width="90" height="30" rx="5" fill="#BBBBBB"/>
+  <text x="465" y="125" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Riverside</text>
+  
+  <!-- Location Banner -->
+  <rect x="220" y="145" width="360" height="50" rx="5" fill="#81C784"/>
+  <text x="400" y="175" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Forest Edge</text>
+  
+  <!-- Gathering Spots Grid -->
+  <rect x="220" y="205" width="170" height="150" rx="5" fill="white"/>
+  <!-- Spot Image -->
+  <rect x="230" y="215" width="150" height="90" rx="3" fill="#A5D6A7"/>
+  <text x="305" y="260" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Tall Trees</text>
+  <!-- Spot Info -->
+  <text x="250" y="320" font-family="Arial" font-size="12" fill="#333333">Energy: 8</text>
+  <text x="250" y="338" font-family="Arial" font-size="12" fill="#333333">Yields: Twigs, Leaves</text>
+  <!-- Spot Button -->
+  <rect x="310" y="323" width="60" height="25" rx="3" fill="#5D4A66"/>
+  <text x="340" y="339" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Gather</text>
+  
+  <rect x="400" y="205" width="170" height="150" rx="5" fill="white"/>
+  <!-- Spot Image -->
+  <rect x="410" y="215" width="150" height="90" rx="3" fill="#BCAAA4"/>
+  <text x="485" y="260" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Hollow Log</text>
+  <!-- Spot Info -->
+  <text x="430" y="320" font-family="Arial" font-size="12" fill="#333333">Energy: 10</text>
+  <text x="430" y="338" font-family="Arial" font-size="12" fill="#333333">Yields: Moss, Twigs</text>
+  <!-- Spot Button -->
+  <rect x="490" y="323" width="60" height="25" rx="3" fill="#5D4A66"/>
+  <text x="520" y="339" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Gather</text>
+  
+  <rect x="220" y="365" width="170" height="150" rx="5" fill="#EEEEEE"/>
+  <!-- Locked Spot Image -->
+  <rect x="230" y="375" width="150" height="90" rx="3" fill="#D7CCC8"/>
+  <text x="305" y="420" font-family="Arial" font-size="16" fill="#666666" text-anchor="middle">Spider Corner</text>
+  <!-- Spot Info -->
+  <text x="250" y="480" font-family="Arial" font-size="12" fill="#666666">Unlock cost:</text>
+  <text x="250" y="498" font-family="Arial" font-size="12" fill="#FF7F50">50 Twigs</text>
+  <!-- Spot Button -->
+  <rect x="305" y="483" width="70" height="25" rx="3" fill="#BBBBBB"/>
+  <text x="340" y="499" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">Unlock</text>
+  
+  <rect x="400" y="365" width="170" height="150" rx="5" fill="#EEEEEE"/>
+  <!-- Locked Spot Image -->
+  <rect x="410" y="375" width="150" height="90" rx="3" fill="#D7CCC8"/>
+  <text x="485" y="420" font-family="Arial" font-size="16" fill="#666666" text-anchor="middle">Rock Pile</text>
+  <!-- Spot Info -->
+  <text x="430" y="480" font-family="Arial" font-size="12" fill="#666666">Unlock cost:</text>
+  <text x="430" y="498" font-family="Arial" font-size="12" fill="#FF7F50">75 Twigs, 25 Leaves</text>
+  <!-- Spot Button -->
+  <rect x="485" y="483" width="70" height="25" rx="3" fill="#BBBBBB"/>
+  <text x="520" y="499" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">Unlock</text>
+  
+  <!-- Cat Assignment Panel -->
+  <rect x="220" y="525" width="360" height="35" rx="5" fill="#5D4A66"/>
+  <text x="310" y="547" font-family="Arial" font-size="14" fill="white">Assign Cats</text>
+  <circle cx="340" cy="542" r="12" fill="#FF7F50"/>
+  <text x="340" y="547" font-family="Arial" font-size="16" fill="white" text-anchor="middle">+</text>
+  <text x="520" y="547" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Automate</text>
+  
+  <!-- Right Panel - Selected Spot Details -->
+  <rect x="600" y="60" width="200" height="510" fill="white"/>
+  
+  <!-- Selected Spot Title -->
+  <rect x="610" y="70" width="180" height="50" rx="5" fill="#E6E9EF"/>
+  <text x="700" y="102" font-family="Arial" font-size="18" font-weight="bold" fill="#333333" text-anchor="middle">Tall Trees</text>
+  
+  <!-- Spot Image -->
+  <rect x="610" y="130" width="180" height="120" rx="5" fill="#A5D6A7"/>
+  
+  <!-- Resource Yields -->
+  <rect x="610" y="260" width="180" height="130" rx="5" fill="#E6E9EF"/>
+  <text x="700" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Resource Yields</text>
+  
+  <!-- Twigs Yield -->
+  <rect x="620" y="290" width="160" height="30" rx="3" fill="white"/>
+  <rect x="630" y="300" width="20" height="10" rx="2" fill="#BCAAA4"/>
+  <text x="660" y="307" font-family="Arial" font-size="12" fill="#333333">Twigs</text>
+  <text x="750" y="307" font-family="Arial" font-size="12" fill="#333333" text-anchor="end">1-2</text>
+  
+  <!-- Leaves Yield -->
+  <rect x="620" y="330" width="160" height="30" rx="3" fill="white"/>
+  <rect x="630" y="340" width="20" height="10" rx="2" fill="#81C784"/>
+  <text x="660" y="347" font-family="Arial" font-size="12" fill="#333333">Leaves</text>
+  <text x="750" y="347" font-family="Arial" font-size="12" fill="#333333" text-anchor="end">2-4</text>
+  
+  <!-- Rare Find Chance -->
+  <rect x="620" y="370" width="160" height="10" rx="2" fill="#E6E9EF"/>
+  <rect x="620" y="370" width="16" height="10" rx="2" fill="#FF7F50"/>
+  <text x="700" y="395" font-family="Arial" font-size="10" fill="#666666" text-anchor="middle">10% Chance for Spider Silk</text>
+  
+  <!-- Energy Cost -->
+  <rect x="610" y="400" width="180" height="60" rx="5" fill="#E6E9EF"/>
+  <text x="625" y="420" font-family="Arial" font-size="14" fill="#333333">Energy Cost: 8</text>
+  <text x="625" y="445" font-family="Arial" font-size="14" fill="#333333">Time per Gather: 5s</text>
+  
+  <!-- Tool Recommendations -->
+  <rect x="610" y="470" width="180" height="90" rx="5" fill="#E6E9EF"/>
+  <text x="700" y="490" font-family="Arial" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Recommended Tools</text>
+  <text x="700" y="515" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">Simple Climbing Hook</text>
+  <text x="700" y="535" font-family="Arial" font-size="12" fill="#81C784" text-anchor="middle">+15% Gathering Efficiency</text>
+  <text x="700" y="555" font-family="Arial" font-size="12" fill="#666666" text-anchor="middle">(Currently Equipped)</text>
+  
+  <!-- Status Bar -->
+  <rect x="0" y="570" width="800" height="30" fill="#3D4A5C"/>
+  <text x="20" y="590" font-family="Arial" font-size="12" fill="white">Day 7 - Afternoon</text>
+  <text x="400" y="590" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Energy: 75/100</text>
+  <text x="780" y="590" font-family="Arial" font-size="12" fill="white" text-anchor="end">Catnip: 124</text>
+</svg>

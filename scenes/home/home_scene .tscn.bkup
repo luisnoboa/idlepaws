@@ -1,0 +1,803 @@
+[gd_scene load_steps=10 format=3 uid="uid://c124u2ttw8eio"]
+
+[ext_resource type="Theme" uid="uid://d38w8ofckbrr0" path="res://assets/cat_theme.tres" id="1_jfeqw"]
+[ext_resource type="Script" uid="uid://7mv8hh78sx5w" path="res://scenes/home/home_scene.gd" id="1_usl0p"]
+[ext_resource type="Texture2D" uid="uid://xatc8lx53dne" path="res://assets/images/cats/sphynx.png" id="2_5rntw"]
+[ext_resource type="StyleBox" uid="uid://o5ufyqhw2kwb" path="res://assets/themes/grey_panel_rounded_flat.tres" id="2_w4owu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4owu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0h8d"]
+bg_color = Color(0.6, 0.6, 0.6, 0.454902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ua24n"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdovq"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rntw"]
+bg_color = Color(0.929412, 0.403922, 0, 1)
+
+[node name="HomeScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_usl0p")
+
+[node name="ContentPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="LeftPanel" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_jfeqw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="CharacterScreen" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="TextureRect" type="TextureRect" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/CharacterScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -127.0
+offset_right = -87.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5rntw")
+
+[node name="HomePlayerLabel" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/CharacterScreen"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 54.0
+offset_right = 530.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 36
+text = "Player Name"
+
+[node name="HomePlayerLevel" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/CharacterScreen"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 134.0
+offset_right = 529.0
+offset_bottom = 199.0
+theme_override_font_sizes/font_size = 36
+text = "Level"
+
+[node name="HomePlayerBreed" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/CharacterScreen"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 214.0
+offset_right = 522.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 36
+text = "Breed"
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="CharInventory" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 4
+columns = 4
+
+[node name="HAT" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "HAT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HAT2" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "COLLAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HAT3" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "CHARM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HAT4" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "PAW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FullInventory" type="GridContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+columns = 5
+
+[node name="ITEM 1" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 2" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 3" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 4" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 5" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 6" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 7" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 8" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 9" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 10" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 11" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 12" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 13" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 14" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 15" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 16" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 17" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 18" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 19" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 20" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 21" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 22" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 23" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 24" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ITEM 25" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/CharInventory/VBoxContainer/ScrollContainer/FullInventory"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0h8d")
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CharacterStats" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "Character Stats"
+horizontal_alignment = 1
+
+[node name="HomeResourceVBOX" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="StrengthRow" type="HBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Strength" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/StrengthRow"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ua24n")
+text = "   Strength"
+vertical_alignment = 1
+
+[node name="StrProgressBar" type="ProgressBar" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/StrengthRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 15.0
+value = 1.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/StrengthRow/StrProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -10.0
+offset_right = 21.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "7 / 15 "
+
+[node name="AgilityRow" type="HBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Agility" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/AgilityRow"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ua24n")
+text = "   Agility"
+vertical_alignment = 1
+
+[node name="AgilityProgressBar" type="ProgressBar" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/AgilityRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/AgilityRow/AgilityProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -10.0
+offset_right = 21.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "7 / 15 "
+
+[node name="IntelligenceRow" type="HBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Intelligence" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/IntelligenceRow"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ua24n")
+text = "   Intelligence"
+vertical_alignment = 1
+
+[node name="IntelligenceProgressBar" type="ProgressBar" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/IntelligenceRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/IntelligenceRow/IntelligenceProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -10.0
+offset_right = 21.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "7 / 15 "
+
+[node name="CharismaRow" type="HBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Charisma" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/CharismaRow"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ua24n")
+text = "   Charisma"
+vertical_alignment = 1
+
+[node name="CharismaProgressBar" type="ProgressBar" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/CharismaRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/CharismaRow/CharismaProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -10.0
+offset_right = 21.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "7 / 15 "
+
+[node name="LuckRow" type="HBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Luck" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/LuckRow"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ua24n")
+text = "   Luck"
+vertical_alignment = 1
+
+[node name="LuckProgressBar" type="ProgressBar" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/LuckRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/MarginContainer/CharacterStats/MarginContainer/VBoxContainer2/HomeResourceVBOX/LuckRow/LuckProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -10.0
+offset_right = 21.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "7 / 15 "
+
+[node name="Right Panel" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mdovq")
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="ColonyPanel" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/ColonyPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Colonylabel" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/ColonyPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Colony"
+
+[node name="Population" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/ColonyPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Population: 4 Cats"
+
+[node name="Shelter" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/ColonyPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Shelter: Level 2"
+
+[node name="Storage" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/ColonyPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Storage: 10/150"
+
+[node name="Energy" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Energy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Energy" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Energy/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Energy"
+autowrap_mode = 2
+
+[node name="EnergyLabel" type="ProgressBar" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Energy/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/fill = SubResource("StyleBoxFlat_5rntw")
+value = 72.0
+
+[node name="Recharge" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Energy/VBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Recharing: +1 / min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Active Quest" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Active Quest"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Active Quest/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Active Quest"
+
+[node name="Resources" type="Panel" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme = ExtResource("1_jfeqw")
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Resources"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/HBoxContainer/Right Panel/MarginContainer/VBoxContainer/Resources/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Resources"

@@ -1,0 +1,336 @@
+[gd_scene load_steps=5 format=3 uid="uid://c124u2ttw8eio"]
+
+[ext_resource type="Theme" uid="uid://d38w8ofckbrr0" path="res://assets/cat_theme.tres" id="1_jfeqw"]
+[ext_resource type="Script" uid="uid://daqdlwxu4t4cl" path="res://scenes/gathering/ResourceGatheringScene.gd" id="1_wokog"]
+[ext_resource type="StyleBox" uid="uid://o5ufyqhw2kwb" path="res://assets/themes/grey_panel_rounded_flat.tres" id="2_w4owu"]
+[ext_resource type="Texture2D" uid="uid://xatc8lx53dne" path="res://assets/images/cats/sphynx.png" id="3_mib5g"]
+
+[node name="GatheringScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wokog")
+
+[node name="ContentPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MainLayoutContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LeftContent" type="MarginContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/LeftContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/LeftContent/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 42
+text = "Resource Gathering"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/LeftContent/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxMainLocationContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/LeftContent/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RightContentMargin" type="MarginContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.6
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer"]
+layout_mode = 2
+
+[node name="GatheringSpotPanel2" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="GSpotVBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerEnergyAvialableGath" type="ProgressBar" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlayerEnergyAvialableGathLabel" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer/PlayerEnergyAvialableGath"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 20.0
+
+[node name="GSpotName" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Gathering Spot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer/GSpotName"]
+layout_mode = 2
+offset_top = 71.0
+offset_right = 720.0
+offset_bottom = 72.0
+theme_override_constants/separation = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer"]
+layout_mode = 2
+
+[node name="GatheringProgressBar" type="TextureProgressBar" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 0.4
+value = 50.0
+fill_mode = 4
+radial_initial_angle = 117.1
+texture_under = ExtResource("3_mib5g")
+texture_progress = ExtResource("3_mib5g")
+tint_over = Color(0.423529, 0.247059, 1, 1)
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GatheringTimeRemaning" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Time Remaining"
+
+[node name="GatheringEnergyRequirements" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel2/GSpotVBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Energy:"
+
+[node name="GatheringSpotPanel" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GatheringSpotsYieldLabel" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "Yields"
+horizontal_alignment = 1
+
+[node name="gatheringResultsContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GatheringSpot1" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot1/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.121569, 1, 1, 1)
+
+[node name="GatherintSpotLabel1" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot1/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Item 1"
+
+[node name="GatherintSpotLabel2" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot1/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "15"
+
+[node name="GatheringSpot2" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot2/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.121569, 0.239216, 1, 1)
+
+[node name="GatherintSpotLabel1" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Item 2: "
+
+[node name="GatherintSpotLabel2" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = " 200"
+
+[node name="GatheringSpot3" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot3/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.68901, 0.27898, 0.463564, 1)
+
+[node name="GatherintSpotLabel1" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot3/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Item3 "
+
+[node name="GatherintSpotLabel2" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GatheringSpotPanel/VBoxContainer2/gatheringResultsContainer/GatheringSpot3/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "50 "
+
+[node name="BonusPanel" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/BonusPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/BonusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Active Bonuses"
+
+[node name="GameStatusPanel" type="Panel" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jfeqw")
+theme_override_styles/panel = ExtResource("2_w4owu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameStatusLabel" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Game Status"
+
+[node name="DayLabel" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Day  10 - Afternoon"
+
+[node name="Season" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Season: Summer"
+
+[node name="Weather" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Weather: Clear"
+
+[node name="HSeparator" type="HSeparator" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="TimePlayed" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Time Played :"
+
+[node name="LastSaved" type="Label" parent="ContentPanel/MarginContainer/MainLayoutContainer/RightContentMargin/MarginContainer/VBoxContainer/GameStatusPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "LastSaved :"

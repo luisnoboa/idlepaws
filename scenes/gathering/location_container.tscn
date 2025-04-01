@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccedysv31htnc"]
+
+[ext_resource type="Script" uid="uid://c7lius38i8kvl" path="res://scenes/gathering/LocationContainer.gd" id="1_53qbo"]
+
+[node name="Location_container" type="VBoxContainer"]
+custom_minimum_size = Vector2(600, 50)
+script = ExtResource("1_53qbo")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="HeaderButton" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HeaderButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="HeaderButton/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 14
+text = "NameLabel"
+
+[node name="InfoLabel" type="Label" parent="HeaderButton/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "infoLabel"
+
+[node name="ArrowIndicator" type="Label" parent="HeaderButton/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 14
+text = "arrow"
+
+[node name="SpotsContainer" type="VBoxContainer" parent="."]
+layout_mode = 2

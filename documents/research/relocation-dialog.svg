@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Semi-transparent Overlay -->
+  <rect width="800" height="600" fill="#000000" fill-opacity="0.5"/>
+  
+  <!-- Dialog Box -->
+  <rect x="150" y="100" width="500" height="400" rx="10" fill="#F0F2F5"/>
+  
+  <!-- Dialog Header -->
+  <rect x="150" y="100" width="500" height="60" rx="10" fill="#5D4A66"/>
+  <text x="400" y="138" font-family="Arial" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Relocate Catropolis</text>
+  <circle cx="630" cy="130" r="15" fill="#FF7F50"/>
+  <text x="630" y="135" font-family="Arial" font-size="18" fill="white" text-anchor="middle">×</text>
+  
+  <!-- Current vs New Location Comparison -->
+  <rect x="170" y="170" width="220" height="60" rx="5" fill="#E6E9EF"/>
+  <text x="280" y="195" font-family="Arial" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Current: Garden Area</text>
+  <text x="280" y="215" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">Level 4 Catropolis</text>
+  
+  <rect x="410" y="170" width="220" height="60" rx="5" fill="#E6E9EF"/>
+  <text x="520" y="195" font-family="Arial" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">New: Forest Edge</text>
+  <text x="520" y="215" font-family="Arial" font-size="12" fill="#FF7F50" text-anchor="middle">+25% Forest Resources</text>
+  
+  <!-- Arrow Between Locations -->
+  <path d="M 390 200 L 410 200" stroke="#333333" stroke-width="2"/>
+  <path d="M 406 196 L 410 200 L 406 204" stroke="#333333" stroke-width="2" fill="none"/>
+  
+  <!-- Cost and Time Section -->
+  <rect x="170" y="240" width="460" height="90" rx="5" fill="#E6E9EF"/>
+  <text x="190" y="260" font-family="Arial" font-size="14" font-weight="bold" fill="#333333">Relocation Costs:</text>
+  
+  <!-- Resource Costs -->
+  <rect x="190" y="270" width="80" height="25" rx="3" fill="white"/>
+  <text x="230" y="287" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">200 Catnip</text>
+  
+  <rect x="280" y="270" width="80" height="25" rx="3" fill="white"/>
+  <text x="320" y="287" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">150 Twigs</text>
+  
+  <rect x="370" y="270" width="80" height="25" rx="3" fill="white"/>
+  <text x="410" y="287" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">100 Leaves</text>
+  
+  <rect x="460" y="270" width="80" height="25" rx="3" fill="white"/>
+  <text x="500" y="287" font-family="Arial" font-size="12" fill="#333333" text-anchor="middle">50 Stones</text>
+  
+  <!-- Time Cost -->
+  <text x="190" y="315" font-family="Arial" font-size="14" fill="#333333">Time Required: 4 hours (real time)</text>
+  
+  <!-- Warning Section -->
+  <rect x="170" y="340" width="460" height="70" rx="5" fill="#FFCCBC"/>
+  <text x="190" y="360" font-family="Arial" font-size="14" font-weight="bold" fill="#D84315">Warning!</text>
+  <text x="190" y="380" font-family="Arial" font-size="12" fill="#D84315">• All current automation will be temporarily disabled during relocation</text>
+  <text x="190" y="400" font-family="Arial" font-size="12" fill="#D84315">• Cats not assigned to help with relocation will be unavailable</text>
+  
+  <!-- Buttons -->
+  <rect x="170" y="420" width="220" height="50" rx="5" fill="#BBBBBB"/>
+  <text x="280" y="450" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Cancel</text>
+  
+  <rect x="410" y="420" width="220" height="50" rx="5" fill="#FF7F50"/>
+  <text x="520" y="450" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Begin Relocation</text>
+</svg>

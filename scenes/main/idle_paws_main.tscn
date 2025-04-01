@@ -1,0 +1,327 @@
+[gd_scene load_steps=11 format=3 uid="uid://kcg7ttnibv3i"]
+
+[ext_resource type="Script" uid="uid://bmmoiyxcc5r0y" path="res://scenes/main/idle_paws_main.gd" id="1_v4p5w"]
+[ext_resource type="Theme" uid="uid://d38w8ofckbrr0" path="res://assets/cat_theme.tres" id="2_bpsc4"]
+[ext_resource type="Texture2D" uid="uid://xatc8lx53dne" path="res://assets/images/cats/sphynx.png" id="3_fhpb7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8vy0"]
+bg_color = Color(0.364706, 0.290196, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qlyw"]
+bg_color = Color(1, 0.498039, 0.313726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0o7sy"]
+bg_color = Color(1, 0.498039, 0.313726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxdvg"]
+bg_color = Color(1, 0.498039, 0.313726, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j40wv"]
+bg_color = Color(0.239216, 0.290196, 0.360784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vlmpw"]
+bg_color = Color(0.239216, 0.290196, 0.360784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c108j"]
+bg_color = Color(0.239216, 0.290196, 0.360784, 1)
+
+[node name="IdlePawsMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4p5w")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.960784, 0.960784, 0.960784, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Panel" parent="MainContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_a8vy0")
+
+[node name="Title" type="Label" parent="MainContainer/Header"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -13.0
+offset_right = 212.0
+offset_bottom = 10.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "Idle Paws"
+
+[node name="HeaderButtons" type="HBoxContainer" parent="MainContainer/Header"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="Button" type="Button" parent="MainContainer/Header/HeaderButtons"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2qlyw")
+text = "?"
+
+[node name="Button2" type="Button" parent="MainContainer/Header/HeaderButtons"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0o7sy")
+text = "⚙"
+
+[node name="Button3" type="Button" parent="MainContainer/Header/HeaderButtons"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vxdvg")
+text = "👤"
+
+[node name="ContentContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginLeftSideBar" type="MarginContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="LeftSidebar" type="Panel" parent="MainContainer/ContentContainer/MarginLeftSideBar"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j40wv")
+
+[node name="MarginVBoxSide" type="MarginContainer" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 4
+
+[node name="vBoxLeftsidebar" type="VBoxContainer" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide"]
+layout_mode = 2
+
+[node name="PlayerProfile" type="Panel" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar"]
+custom_minimum_size = Vector2(140, 80)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vlmpw")
+
+[node name="PlayerAvatar" type="TextureRect" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/PlayerProfile"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -59.0
+offset_right = 96.0
+offset_bottom = 27.0
+grow_vertical = 2
+texture = ExtResource("3_fhpb7")
+expand_mode = 1
+
+[node name="PlayerName" type="Label" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/PlayerProfile"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = -2.0
+offset_right = 209.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Whiskers"
+
+[node name="PlayerLevel" type="Label" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/PlayerProfile"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 32.0
+offset_right = 166.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.666667, 0.666667, 0.666667, 1)
+theme_override_font_sizes/font_size = 16
+text = "Level 0"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NavigationVBOX" type="VBoxContainer" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HomeButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Home"
+
+[node name="Inventory" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Inventory
+"
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+layout_mode = 2
+
+[node name="CatropolisButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Catropolis"
+
+[node name="GatheringButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Gathering
+"
+
+[node name="ExplorationButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Exploration"
+
+[node name="SkillsButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Skills"
+
+[node name="ResearchButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Research
+"
+
+[node name="CollectionsButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Collections"
+
+[node name="AchievementsButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "Achievements
+"
+
+[node name="News & UpdatesButton" type="Button" parent="MainContainer/ContentContainer/MarginLeftSideBar/LeftSidebar/MarginVBoxSide/vBoxLeftsidebar/ScrollContainer/NavigationVBOX"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+text = "News & Updates
+"
+
+[node name="MainContentHBOX" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="MainContentDisplay" type="Panel" parent="MainContainer/ContentContainer/MainContentHBOX"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatusBar" type="Panel" parent="MainContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("2_bpsc4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_c108j")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/StatusBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_bpsc4")
+
+[node name="DayTime" type="Label" parent="MainContainer/StatusBar/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "   Day 1 - Morning"
+
+[node name="SaveTime" type="Label" parent="MainContainer/StatusBar/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = " | Last Update"
+
+[node name="XPProgress" type="Label" parent="MainContainer/StatusBar/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Next Level: 100 / 500 XP"
+
+[node name="Progress" type="Label" parent="MainContainer/StatusBar/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Version 0.0.1     "

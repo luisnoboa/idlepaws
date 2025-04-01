@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bagjnfga1gfu1"]
+
+[ext_resource type="Script" uid="uid://crm6mxhrgfvi8" path="res://scenes/gathering/SpotCard.gd" id="1_waljn"]
+
+[node name="SpotCard" type="Panel"]
+custom_minimum_size = Vector2(0, 100)
+script = ExtResource("1_waljn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+offset_right = 400.0
+offset_bottom = 95.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "NameLabel"
+
+[node name="YieldsLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "YieldLabel"
+
+[node name="EnergyLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "EnergyLabel"
+
+[node name="UnlockLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "unlockLabel"
+
+[node name="ActionButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Gather"
